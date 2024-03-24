@@ -19,14 +19,14 @@
    npm install -g aicommits
    ```
 
-2. Retrieve your API key from [OpenAI](https://platform.openai.com/account/api-keys)
+2. Retrieve your API key from [KimiAI](https://platform.moonshot.cn/console/api-keys)
 
    > Note: If you haven't already, you'll have to create an account and set up billing.
 
 3. Set the key so aicommits can use it:
 
    ```sh
-   aicommits config set OPENAI_KEY=<your token>
+   aicommits config set KIMI_KEY=<your token>
    ```
 
    This will create a `.aicommits` file in your home directory.
@@ -134,13 +134,13 @@ aicommits config get <key>
 For example, to retrieve the API key, you can use:
 
 ```sh
-aicommits config get OPENAI_KEY
+aicommits config get KIMI_KEY
 ```
 
 You can also retrieve multiple configuration options at once by separating them with spaces:
 
 ```sh
-aicommits config get OPENAI_KEY generate
+aicommits config get KIMI_KEY generate
 ```
 
 ### Setting a configuration value
@@ -154,22 +154,22 @@ aicommits config set <key>=<value>
 For example, to set the API key, you can use:
 
 ```sh
-aicommits config set OPENAI_KEY=<your-api-key>
+aicommits config set KIMI_KEY=<your-api-key>
 ```
 
 You can also set multiple configuration options at once by separating them with spaces, like
 
 ```sh
-aicommits config set OPENAI_KEY=<your-api-key> generate=3 locale=en
+aicommits config set KIMI_KEY=<your-api-key> generate=3 locale=en
 ```
 
 ### Options
 
-#### OPENAI_KEY
+#### KIMI_KEY
 
 Required
 
-The OpenAI API key. You can retrieve it from [OpenAI API Keys page](https://platform.openai.com/account/api-keys).
+The Kimi API key. You can retrieve it from [KimiAI API Keys page](https://platform.moonshot.cn/console/api-keys).
 
 #### locale
 

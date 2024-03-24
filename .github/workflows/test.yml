@@ -43,7 +43,7 @@ jobs:
           tinyproxy
       - name: Test
         env:
-          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          KIMI_KEY: ${{ secrets.KIMI_KEY }}
         run: |
           pnpm test
           pnpm --use-node-version=14.21.3 test

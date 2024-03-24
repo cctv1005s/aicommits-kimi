@@ -21,13 +21,13 @@ const parseAssert = (name: string, condition: any, message: string) => {
 };
 
 const configParsers = {
-	OPENAI_KEY(key?: string) {
+	KIMI_KEY(key?: string) {
 		if (!key) {
 			throw new KnownError(
-				'Please set your OpenAI API key via `aicommits config set OPENAI_KEY=<your token>`'
+				'Please set your OpenAI API key via `aicommits config set KIMI_KEY=<your token>`'
 			);
 		}
-		parseAssert('OPENAI_KEY', key.startsWith('sk-'), 'Must start with "sk-"');
+		parseAssert('KIMI_KEY', key.startsWith('sk-'), 'Must start with "sk-"');
 		// Key can range from 43~51 characters. There's no spec to assert this.
 
 		return key;

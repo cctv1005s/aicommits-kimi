@@ -40,7 +40,7 @@ export default () =>
 		let messages: string[];
 		try {
 			messages = await generateCommitMessage(
-				config.OPENAI_KEY,
+				config.KIMI_KEY,
 				config.model,
 				config.locale,
 				staged!.diff,
