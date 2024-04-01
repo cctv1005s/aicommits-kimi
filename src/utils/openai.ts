@@ -132,7 +132,7 @@ const deduplicateMessages = (array: string[]) => Array.from(new Set(array));
 
 export const generateCommitMessage = async (
 	apiKey: string,
-	model: TiktokenModel,
+	model: TiktokenModel | 'moonshot-v1-32k' | 'moonshot-v1-8k' | 'moonshot-v1-128k',
 	locale: string,
 	diff: string,
 	completions: number,

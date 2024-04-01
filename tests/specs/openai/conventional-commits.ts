@@ -140,7 +140,7 @@ export default testSuite(({ describe }) => {
 			} as ValidConfig;
 			const commitMessages = await generateCommitMessage(
 				KIMI_KEY!,
-				'gpt-3.5-turbo',
+				'moonshot-v1-32k',
 				config.locale,
 				gitDiff,
 				config.generate,
