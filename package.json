@@ -1,5 +1,5 @@
 {
-	"name": "aicommits",
+	"name": "aicommits-kimi",
 	"version": "0.0.0-semantic-release",
 	"description": "Writes your git commit messages for you with AI",
 	"keywords": [
@@ -8,8 +8,8 @@
 		"commit"
 	],
 	"license": "MIT",
-	"repository": "Nutlope/aicommits",
-	"author": "Hassan El Mghari (@nutlope)",
+	"repository": "cctv1005s/aicommits",
+	"author": "Hassan El Mghari (@nutlope) Li Yang (@cctv1005s)",
 	"type": "module",
 	"files": [
 		"dist"
