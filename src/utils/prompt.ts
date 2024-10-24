@@ -5,7 +5,7 @@ const commitTypeFormats: Record<CommitType, string> = {
 	conventional: '<type>(<optional scope>): <commit message>',
 };
 const specifyCommitFormat = (type: CommitType) =>
-	`The output response must be in format:\n${commitTypeFormats[type]}`;
+	`The output response must be in format:\n${commitTypeFormats[type]}, for example: feat: add new feature or fix: correct typo`;
 
 const commitTypes: Record<CommitType, string> = {
 	'': '',
