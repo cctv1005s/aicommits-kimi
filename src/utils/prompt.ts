@@ -5,7 +5,47 @@ const commitTypeFormats: Record<CommitType, string> = {
 	conventional: '<type>(<optional scope>): <commit message>',
 };
 const specifyCommitFormat = (type: CommitType) =>
-	`The output response must be in format:\n${commitTypeFormats[type]}, for example: feat: add new feature or fix: correct typo`;
+	`The output response must be in format:\n${commitTypeFormats[type]}.`;
+
+const specifyExample = () =>
+`
+if the input is: 
+<input>
+Author: LiYang <cctv1005s@gmail.com>
+Date:   Thu Oct 24 17:17:24 2024 +0800
+
+    feat: update commit format message
+
+diff --git a/package.json b/package.json
+index d725a58..4b3ef8b 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,6 @@
+ {
+        "name": "aicommits-kimi",
+-       "version": "0.0.4",
++       "version": "0.0.5",
+        "description": "Writes your git commit messages for you with AI",
+        "keywords": [
+                "ai",
+diff --git a/src/utils/prompt.ts b/src/utils/prompt.ts
+index 44fb4bb..751ff4c 100644
+--- a/src/utils/prompt.ts
++++ b/src/utils/prompt.ts
+@@ -5,7 +5,7 @@ const commitTypeFormats: Record<CommitType, string> = {
+        conventional: '<type>(<optional scope>): <commit message>',
+ };
+ const specifyCommitFormat = (type: CommitType) =>
+-       \`The output response must be in format:\n$\{commitTypeFormats[type]}\`;
++       \`The output response must be in format:\n$\{commitTypeFormats[type]}, for example: feat: add new feature or fix: correct typo\`;
+
+</input>
+
+the output response should be:
+<output>
+feat: update commit format message
+</output>
+`;
 
 const commitTypes: Record<CommitType, string> = {
 	'': '',
@@ -50,6 +90,7 @@ export const generatePrompt = (
 		'Exclude anything unnecessary such as translation. Your entire response will be passed directly into git commit.',
 		commitTypes[type],
 		specifyCommitFormat(type),
+		specifyExample(),
 	]
 		.filter(Boolean)
 		.join('\n');
