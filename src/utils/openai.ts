@@ -113,8 +113,9 @@ const sanitizeMessage = (message: string) =>
 		.replace(/^<commit message>/g, '')
 		.replace(/<\/commit message>$/g, '')
 		.replace(/^<output>/g, '')
-		.replace(/<\/output>$/g, '');
-
+		.replace(/<\/output>$/g, '')
+		.replace(/^<commit>/g, '')
+		.replace(/<\/commit>$/g, '');
 const deduplicateMessages = (array: string[]) => Array.from(new Set(array));
 
 // const generateStringFromLength = (length: number) => {
